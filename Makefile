@@ -6,7 +6,7 @@ include $(BOLOS_SDK)/Makefile.defines
 #Bytecoin /44'/204'
 #--path "2147484108/2147483852"
 APP_LOAD_PARAMS= --appFlags 0x40 --curve secp256k1 $(COMMON_LOAD_PARAMS)
-APPNAME = "Bytecoin"
+APPNAME = "Infinium"
 
 ifeq ($(TARGET_NAME),TARGET_BLUE)
 ICONNAME = images/icon_bytecoin_blue.gif

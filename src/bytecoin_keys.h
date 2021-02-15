@@ -20,8 +20,8 @@
 
 #include "bytecoin_crypto.h"
 
-#define BYTECOIN_ADDRESS_BASE58_PREFIX          6       // legacy addresses start with "2"
-#define BYTECOIN_ADDRESS_BASE58_PREFIX_AMETHYST 572238  // addresses start with "bcnZ", varintdata={0xce, 0xf6, 0x22}
+#define INFINIUM_ADDRESS_BASE58_PREFIX          1288825       // legacy addresses start with "2"
+#define INFINIUM_ADDRESS_BASE58_PREFIX_AMETHYST 88386169      // addresses start with "bcnZ", varintdata={0xce, 0xf6, 0x22}
 
 void derive_from_seed_to_hash(const hash_t* seed, const void* buf, size_t len, hash_t* result);
 void derive_from_seed_to_scalar(const hash_t* seed, const void* buf, size_t len, elliptic_curve_scalar_t* result);

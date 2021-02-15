@@ -107,8 +107,8 @@ const bagl_element_t* ui_menu_main_preprocessor(const ux_menu_entry_t* entry, ba
                 public_key_t address_S;
                 public_key_t address_Sv;
                 prepare_address_public(&G_bytecoin_vstate.wallet_keys, 0, &address_S, &address_Sv);
-                size = encode_address(BYTECOIN_ADDRESS_BASE58_PREFIX_AMETHYST, &address_S, &address_Sv, addr_str, size);
-                short_address(addr_str, size);
+                size = encode_address(INFINIUM_ADDRESS_BASE58_PREFIX_AMETHYST, &address_S, &address_Sv, addr_str, size);
+                short_address(addr_str, size+1);
                 G_bytecoin_vstate.ui_data.string_is_valid = true;
             }
 //            element->component.stroke = 10;  // 1 sec stop in each way
@@ -336,7 +336,7 @@ int user_confirm_view_outgoing_addresses(void)
     return 0;
 }
 
-#define NUMBER_OF_DECIMAL_PLACES 8
+#define NUMBER_OF_DECIMAL_PLACES 12
 
 //static
 //size_t amount2str_old(uint64_t amount, char* amount_str, size_t str_len)
@@ -481,7 +481,7 @@ const bagl_element_t* ui_menu_confirm_tx_preprocessor(const ux_menu_entry_t* ent
             break;
         case MENU_CURRENT_ENTRY_LINE2_ID:
             {
-                const uint64_t prefix = (sig_state->dst_address_tag == BYTECOIN_UNLINKABLE_ADDRESS_TAG) ? BYTECOIN_ADDRESS_BASE58_PREFIX_AMETHYST : BYTECOIN_ADDRESS_BASE58_PREFIX;
+                const uint64_t prefix = (sig_state->dst_address_tag == BYTECOIN_UNLINKABLE_ADDRESS_TAG) ? INFINIUM_ADDRESS_BASE58_PREFIX_AMETHYST : INFINIUM_ADDRESS_BASE58_PREFIX;
                 encode_address(prefix, &sig_state->dst_address_s, &sig_state->dst_address_s_v, G_bytecoin_vstate.ui_data.address_str, sizeof(G_bytecoin_vstate.ui_data.address_str) - 1);
 
                 element->component.stroke = 10;  // 1 sec stop in each way
