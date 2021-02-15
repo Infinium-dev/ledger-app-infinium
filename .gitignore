@@ -2,3 +2,4 @@ bin
 debug
 dep
 obj
+compilers/clang+llvm-4.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz
